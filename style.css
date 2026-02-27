@@ -11,22 +11,35 @@
 }
 
 body {
-    background-color: var(--deep-bg);
-    /* Camada de 85% de escuridão para garantir legibilidade */
-    background-image: linear-gradient(rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.85)), 
-                      url('./assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--text-off);
-    font-family: 'Segoe UI', sans-serif;
-    min-height: 100vh;
+    /* ... mantenha suas outras configurações de background ... */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centraliza tudo horizontalmente */
     justify-content: center;
     text-align: center;
-    padding: 20px;
+}
+
+.action-hub {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px; /* Largura ideal para leitura e clique */
+    margin: 40px auto 0 auto; /* Centraliza o bloco e dá espaçamento superior */
+}
+
+.cyber-btn {
+    display: block;
+    width: 100%; /* Faz todos os botões terem o mesmo tamanho */
+    padding: 15px;
+    border: 1px solid var(--gold) !important;
+    color: var(--gold) !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    background: transparent;
 }
 
 /* Forçando o Ouro Fosco e removendo o azul padrão */
