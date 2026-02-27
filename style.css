@@ -1,4 +1,4 @@
-/* Palette: Deep Indigo, Matte Gold, Ink Black */
+/* Palette */
 :root {
     --gold: #D4AF37;
     --deep-bg: #0A0E1A;
@@ -12,39 +12,47 @@
     box-sizing: border-box;
 }
 
+/* Base estrutural */
 body {
     background-color: var(--deep-bg);
-    /* Camada de 85% de escuridão para contraste estrutural */
     background-image: linear-gradient(rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.85)), 
                       url('./assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
     color: var(--text-off);
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    min-height: 100vh;
-    
-    /* Centralização Total */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
 }
 
-/* Identidade Visual SHC - Sumi-Ink & Steel */
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centralização segura */
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Identidade */
 h1 {
     font-size: clamp(3rem, 10vw, 5rem);
-    color: var(--gold) !important;
+    color: var(--gold);
     letter-spacing: 15px;
     text-shadow: 0 0 30px var(--shadow-glow);
-    margin: 0;
     line-height: 1;
 }
 
 .brand-sub {
-    color: var(--gold) !important;
+    color: var(--gold);
     letter-spacing: 6px;
     font-size: 0.8rem;
     margin-top: 10px;
@@ -52,7 +60,7 @@ h1 {
     opacity: 0.9;
 }
 
-/* Manifesto - Baixa Carga Cognitiva */
+/* Manifesto */
 .core-manifesto {
     margin: 60px 0;
     max-width: 700px;
@@ -68,7 +76,7 @@ h2 {
 
 .slogan {
     font-style: italic;
-    color: var(--gold) !important;
+    color: var(--gold);
     margin-bottom: 25px;
     font-size: 1.1rem;
 }
@@ -80,42 +88,40 @@ h2 {
     opacity: 0.9;
 }
 
-/* Action Hub - Botões de Auditoria */
+/* Botões */
 .action-hub {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 320px; /* Tamanho fixo para simetria */
-    margin: 0 auto;
+    max-width: 320px;
 }
 
-/* Removendo o azul e sublinhado de forma agressiva */
 .action-hub a.cyber-btn {
     display: block;
     width: 100%;
     padding: 18px;
-    border: 1px solid var(--gold) !important;
-    color: var(--gold) !important;
-    text-decoration: none !important;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 2px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: transparent;
+    transition: all 0.3s ease;
 }
 
 .action-hub a.cyber-btn:hover {
-    background: var(--gold) !important;
-    color: var(--deep-bg) !important;
+    background: var(--gold);
+    color: var(--deep-bg);
     box-shadow: 0 0 25px var(--gold);
     transform: translateY(-2px);
 }
 
 .disabled {
     opacity: 0.3;
-    border: 1px solid #444 !important;
-    color: #666 !important;
+    border: 1px solid #444;
+    color: #666;
     padding: 18px;
     font-size: 0.85rem;
     letter-spacing: 2px;
@@ -123,12 +129,14 @@ h2 {
     cursor: not-allowed;
 }
 
-/* Status Bar / Footer */
+/* Footer fixado ao final naturalmente */
 footer {
     margin-top: 60px;
+    padding-bottom: 30px;
+    text-align: center;
     font-family: 'Courier New', monospace;
     font-size: 0.75rem;
-    color: var(--gold) !important;
+    color: var(--gold);
     letter-spacing: 2px;
 }
 
