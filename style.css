@@ -11,97 +11,96 @@
 }
 
 body {
-    background-color: var(--deep-bg) !important;
-    /* Camada escura de 85% para o texto brilhar sobre a imagem */
+    background-color: var(--deep-bg);
+    /* Camada de 85% de escuridão para garantir legibilidade */
     background-image: linear-gradient(rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.85)), 
                       url('./assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: var(--text-off);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 20px;
 }
 
+/* Forçando o Ouro Fosco e removendo o azul padrão */
 h1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     color: var(--gold) !important;
     letter-spacing: 12px;
-    margin: 0;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    margin-bottom: 5px;
 }
 
 .brand-sub {
     color: var(--gold) !important;
     letter-spacing: 5px;
     font-size: 0.8rem;
+    text-transform: uppercase;
 }
 
 .core-manifesto {
-    margin: 40px 20px;
-    max-width: 700px;
-}
-
-h2 {
-    font-size: 1.6rem;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-    color: var(--text-off);
+    margin: 40px 0;
+    max-width: 650px;
 }
 
 .slogan {
     font-style: italic;
     color: var(--gold) !important;
-    margin-bottom: 25px;
+    margin: 15px 0;
 }
 
-.description p {
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-/* MATANDO OS LINKS AZUIS DEFINITIVAMENTE */
+/* Estilização dos Botões (Matando os links azuis) */
 .action-hub {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 280px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
 }
 
-.cyber-btn {
+/* Seleciona especificamente os links dentro do hub para garantir a cor */
+.action-hub a.cyber-btn {
     display: block;
     padding: 15px;
     border: 1px solid var(--gold) !important;
-    color: var(--gold) !important; /* Aqui mata o azul */
-    text-decoration: none !important; /* Aqui mata o sublinhado */
+    color: var(--gold) !important; 
+    text-decoration: none !important; 
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 2px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     background: transparent;
 }
 
-.cyber-btn:hover {
+.action-hub a.cyber-btn:hover {
     background: var(--gold) !important;
     color: var(--deep-bg) !important;
+    box-shadow: 0 0 15px var(--gold);
 }
 
 .disabled {
     opacity: 0.3;
-    border-color: #444 !important;
+    border: 1px solid #444 !important;
     color: #444 !important;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
 }
 
 footer {
     margin-top: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', monospace;
     font-size: 0.7rem;
     color: var(--gold) !important;
+    opacity: 0.8;
 }
 
 .blink { animation: blinker 1.5s linear infinite; }
