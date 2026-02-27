@@ -11,15 +11,15 @@
 }
 
 body {
-    background-color: var(--deep-bg);
-    /* IMPORTANTE: linear-gradient escurece a imagem para o texto aparecer */
+    background-color: var(--deep-bg) !important;
+    /* Camada escura de 85% para o texto brilhar sobre a imagem */
     background-image: linear-gradient(rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.85)), 
-                      url('assets/background.jpg');
+                      url('./assets/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: var(--text-off);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,70 +30,78 @@ body {
 
 h1 {
     font-size: 4rem;
-    color: var(--gold);
+    color: var(--gold) !important;
     letter-spacing: 12px;
     margin: 0;
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
 .brand-sub {
-    color: var(--gold);
+    color: var(--gold) !important;
     letter-spacing: 5px;
     font-size: 0.8rem;
 }
 
 .core-manifesto {
-    margin: 40px 0;
-    max-width: 600px;
+    margin: 40px 20px;
+    max-width: 700px;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     letter-spacing: 3px;
     margin-bottom: 10px;
+    color: var(--text-off);
 }
 
 .slogan {
     font-style: italic;
-    color: var(--gold);
-    margin-bottom: 20px;
+    color: var(--gold) !important;
+    margin-bottom: 25px;
 }
 
-/* Transformando links em botões para matar o "azul" de navegador */
+.description p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* MATANDO OS LINKS AZUIS DEFINITIVAMENTE */
 .action-hub {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 280px;
+    margin: 0 auto;
 }
 
 .cyber-btn {
-    padding: 12px;
-    border: 1px solid var(--gold);
-    color: var(--gold) !important; /* Força a cor dourada */
-    text-decoration: none !important; /* Remove o sublinhado */
+    display: block;
+    padding: 15px;
+    border: 1px solid var(--gold) !important;
+    color: var(--gold) !important; /* Aqui mata o azul */
+    text-decoration: none !important; /* Aqui mata o sublinhado */
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 2px;
     transition: 0.3s;
+    background: transparent;
 }
 
 .cyber-btn:hover {
-    background: var(--gold);
+    background: var(--gold) !important;
     color: var(--deep-bg) !important;
 }
 
 .disabled {
     opacity: 0.3;
-    border-color: #444;
+    border-color: #444 !important;
     color: #444 !important;
 }
 
 footer {
-    margin-top: 40px;
-    font-family: monospace;
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 0.7rem;
-    color: var(--gold);
+    color: var(--gold) !important;
 }
 
 .blink { animation: blinker 1.5s linear infinite; }
