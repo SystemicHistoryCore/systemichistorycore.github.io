@@ -13,7 +13,6 @@
 
 body {
     background-color: var(--deep-bg);
-    /* Camada de 85% de escuridão para contraste estrutural */
     background-image: linear-gradient(rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.85)), 
                       url('./assets/background.jpg');
     background-size: cover;
@@ -22,8 +21,6 @@ body {
     color: var(--text-off);
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
-    
-    /* Centralização Total */
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -32,14 +29,12 @@ body {
     padding: 40px 20px;
 }
 
-/* Identidade Visual SHC - Sumi-Ink & Steel */
 h1 {
     font-size: clamp(3rem, 10vw, 5rem);
     color: var(--gold) !important;
     letter-spacing: 15px;
     text-shadow: 0 0 30px var(--shadow-glow);
     margin: 0;
-    line-height: 1;
 }
 
 .brand-sub {
@@ -73,7 +68,6 @@ h2 {
     margin-bottom: 12px;
 }
 
-/* Botões de Auditoria Centralizados */
 .action-hub {
     display: flex;
     flex-direction: column;
@@ -83,7 +77,6 @@ h2 {
     margin: 0 auto;
 }
 
-/* Removendo links azuis e sublinhados */
 .action-hub a.cyber-btn {
     display: block;
     width: 100%;
