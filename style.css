@@ -1,7 +1,9 @@
+/* Palette: Deep Indigo, Matte Gold, Ink Black */
 :root {
     --gold: #D4AF37;
     --deep-bg: #0A0E1A;
     --text-off: #E0E0E0;
+    --shadow-glow: rgba(212, 175, 55, 0.3);
 }
 
 * {
@@ -11,110 +13,129 @@
 }
 
 body {
-    /* ... mantenha suas outras configurações de background ... */
+    background-color: var(--deep-bg);
+    /* Camada de 85% de escuridão para contraste estrutural */
+    background-image: linear-gradient(rgba(10, 14, 26, 0.85), rgba(10, 14, 26, 0.85)), 
+                      url('./assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-off);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    
+    /* Centralização Total */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza tudo horizontalmente */
+    align-items: center; 
     justify-content: center;
     text-align: center;
+    padding: 40px 20px;
 }
 
+/* Identidade Visual SHC - Sumi-Ink & Steel */
+h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    color: var(--gold) !important;
+    letter-spacing: 15px;
+    text-shadow: 0 0 30px var(--shadow-glow);
+    margin: 0;
+    line-height: 1;
+}
+
+.brand-sub {
+    color: var(--gold) !important;
+    letter-spacing: 6px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Manifesto - Baixa Carga Cognitiva */
+.core-manifesto {
+    margin: 60px 0;
+    max-width: 700px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.slogan {
+    font-style: italic;
+    color: var(--gold) !important;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.description p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Action Hub - Botões de Auditoria */
 .action-hub {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     width: 100%;
-    max-width: 320px; /* Largura ideal para leitura e clique */
-    margin: 40px auto 0 auto; /* Centraliza o bloco e dá espaçamento superior */
+    max-width: 320px; /* Tamanho fixo para simetria */
+    margin: 0 auto;
 }
 
-.cyber-btn {
+/* Removendo o azul e sublinhado de forma agressiva */
+.action-hub a.cyber-btn {
     display: block;
-    width: 100%; /* Faz todos os botões terem o mesmo tamanho */
-    padding: 15px;
+    width: 100%;
+    padding: 18px;
     border: 1px solid var(--gold) !important;
     color: var(--gold) !important;
     text-decoration: none !important;
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 2px;
-    transition: 0.3s ease;
-    background: transparent;
-}
-
-/* Forçando o Ouro Fosco e removendo o azul padrão */
-h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    color: var(--gold) !important;
-    letter-spacing: 12px;
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-    margin-bottom: 5px;
-}
-
-.brand-sub {
-    color: var(--gold) !important;
-    letter-spacing: 5px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-}
-
-.core-manifesto {
-    margin: 40px 0;
-    max-width: 650px;
-}
-
-.slogan {
-    font-style: italic;
-    color: var(--gold) !important;
-    margin: 15px 0;
-}
-
-/* Estilização dos Botões (Matando os links azuis) */
-.action-hub {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 300px;
-}
-
-/* Seleciona especificamente os links dentro do hub para garantir a cor */
-.action-hub a.cyber-btn {
-    display: block;
-    padding: 15px;
-    border: 1px solid var(--gold) !important;
-    color: var(--gold) !important; 
-    text-decoration: none !important; 
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    transition: 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: transparent;
 }
 
 .action-hub a.cyber-btn:hover {
     background: var(--gold) !important;
     color: var(--deep-bg) !important;
-    box-shadow: 0 0 15px var(--gold);
+    box-shadow: 0 0 25px var(--gold);
+    transform: translateY(-2px);
 }
 
 .disabled {
     opacity: 0.3;
     border: 1px solid #444 !important;
-    color: #444 !important;
-    padding: 15px;
+    color: #666 !important;
+    padding: 18px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    cursor: not-allowed;
+}
+
+/* Status Bar / Footer */
+footer {
+    margin-top: 60px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: var(--gold) !important;
     letter-spacing: 2px;
 }
 
-footer {
-    margin-top: 50px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.7rem;
-    color: var(--gold) !important;
-    opacity: 0.8;
+.blink {
+    animation: blinker 1.5s linear infinite;
 }
 
-.blink { animation: blinker 1.5s linear infinite; }
-@keyframes blinker { 50% { opacity: 0; } }
+@keyframes blinker {
+    50% { opacity: 0; }
+}
